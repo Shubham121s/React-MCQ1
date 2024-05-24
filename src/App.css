@@ -1,0 +1,168 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #bfcaf0, #302839);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.app:hover {
+  transform: scale(1.02);
+}
+
+.question-section {
+  margin-bottom: 30px;
+}
+
+.question-count {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.question-text {
+  font-size: 1.6em;
+  margin-bottom: 25px;
+  color: #222;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.answer-section button {
+  background: #6e8efb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.answer-section button:hover {
+  background: #5b77e2;
+  transform: translateY(-3px);
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.navigation-buttons button {
+  background: #28a745;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.navigation-buttons button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.navigation-buttons button:not(:disabled):hover {
+  background: #218838;
+  transform: translateY(-3px);
+}
+
+.status-section {
+  margin-top: 30px;
+  font-size: 1em;
+  color: #555;
+}
+
+.status-section p {
+  margin: 10px 0;
+}
+
+.score-section {
+  font-size: 2em;
+  font-weight: bold;
+  color: #222;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .question-text {
+    font-size: 1.4em;
+  }
+
+  .answer-section button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .status-section {
+    font-size: 0.9em;
+  }
+
+  .score-section {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 1.2em;
+  }
+
+  .answer-section button {
+    padding: 8px 15px;
+    font-size: 0.8em;
+  }
+
+  .navigation-buttons button {
+    padding: 8px 15px;
+    font-size: 0.8em;
+  }
+
+  .status-section {
+    font-size: 0.8em;
+  }
+
+  .score-section {
+    font-size: 1.5em;
+  }
+}
